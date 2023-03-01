@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C666FA08-41A0-4A1C-A999-DC5A041EFAEF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04C236AE-CA79-4659-9707-C1BEC3077F98"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "new/ProductViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "fetchNextPage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "04C236AE-CA79-4659-9707-C1BEC3077F98 - d0259ae5ef95fda2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (new.ProductResponseModel) -&gt; () in new.ProductViewModel.fetchNextPage() -&gt; ()"
+                  moduleName = "new"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yowaki/Desktop/code/swift-project/hello/new/new/new/new/ProductViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "04C236AE-CA79-4659-9707-C1BEC3077F98 - f7f004d3343ff9de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (new.ProductResponseModel.Product) -&gt; new.ProductModel in closure #3 (new.ProductResponseModel) -&gt; () in new.ProductViewModel.fetchNextPage() -&gt; ()"
+                  moduleName = "new"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yowaki/Desktop/code/swift-project/hello/new/new/new/new/ProductViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0068A93E-BE68-4882-AF7A-CF3DF3AD0C62"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "new/ProductViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "fetchNextPage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
