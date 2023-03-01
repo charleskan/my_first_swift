@@ -55,7 +55,7 @@ class ProductViewModel: ObservableObject {
             return
         }
         
-        guard let url = URL(string: ProductViewModel.baseUrl + "/" + (nextPageUrl ?? "")) else {
+        guard let url = URL(string: ProductViewModel.baseUrl + "/" + (nextPageUrl)) else {
             errorMessage = "Invalid URL"
             return
         }
