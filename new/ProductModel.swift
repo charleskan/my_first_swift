@@ -5,6 +5,7 @@ struct ProductModel: Identifiable {
     let brand: String
     let name: String
     let price: Double
+    let currency: String
     let discountPrice: Double?
     let nextPageUrl: String?
     
@@ -15,6 +16,7 @@ struct ProductModel: Identifiable {
         self.brand = product.brand
         self.name = product.name
         self.price = product.price.value
+        self.currency = product.price.currency
         self.discountPrice = product.discountPrice?.value
         self.nextPageUrl = nextPageUrl
     }

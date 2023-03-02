@@ -77,11 +77,4 @@ class ProductViewModel: ObservableObject {
         isLoading = true
         task.store(in: &cancellables)
     }
-    
-    private func handleProductResponse(_ products: [ProductResponseModel.Product]) {
-        self.products = products.map { ProductModel(from: $0, nextPageUrl: "") }
-        self.nextPageUrl = products.isEmpty ? nil : nextPageUrl
-    }
-    
-    
 }

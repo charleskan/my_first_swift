@@ -37,7 +37,7 @@ struct ProductRowView: View {
                     .frame(height: 52)
                 HStack{
                     if product.discountPrice != nil {
-                        Text("HKD \(String(format: "%.2f", product.discountPrice!))")
+                        Text("\(product.currency) \(String(format: "%.2f", product.discountPrice!))")
                             .font(.custom(font, size: 16))
                             .fontWeight(.bold)
                             .foregroundColor(.red)
