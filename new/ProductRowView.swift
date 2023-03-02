@@ -49,7 +49,19 @@ struct ProductRowView: View {
     }
     
     private func loadImage() {
-       
-    }
+            guard let url = URL(string: product.image) else {
+                return
+            }
+            
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                guard let data = data, error == nil else {
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    image = UIImage(data: data)
+                }
+            }.resume()
+        }
 }
 
