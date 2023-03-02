@@ -30,38 +30,37 @@ struct ProductRowView: View {
                 .font(.headline)
             
             HStack {
-                Text(product.name)
                 Text(String(format: "%.2f", product.price))
                     .font(.subheadline)
-//                if let discountPrice = product.discountPrice {
-//                    Text(product.price)
-//                        .font(.subheadline)
-//                        .strikethrough()
-//                    Text(String(format: "%.2f", discountPrice.value))
-//                        .font(.subheadline)
-//                        .foregroundColor(.red)
-//                }
+                if product.discountPrice != nil {
+                    Text("discountPrice")
+                        .font(.subheadline)
+                        .strikethrough()
+                    Text(String(format: "%.2f", product.discountPrice!))
+                        .font(.subheadline)
+                        .foregroundColor(.red)
+                }
             }
         }
         .onAppear {
             loadImage()
         }
+        .onDisappear {
+            image = nil
+        }
     }
     
     private func loadImage() {
-            guard let url = URL(string: product.image) else {
-                return
+        guard image == nil else { return }
+        DispatchQueue.global(qos: .background).async {
+            guard let imageUrl = URL(string: product.image),
+                  let data = try? Data(contentsOf: imageUrl),
+                  let loadedImage = UIImage(data: data) else { return }
+            DispatchQueue.main.async {
+                self.image = loadedImage
             }
-            
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                guard let data = data, error == nil else {
-                    return
-                }
-                
-                DispatchQueue.main.async {
-                    image = UIImage(data: data)
-                }
-            }.resume()
         }
+    }
 }
+
 
