@@ -42,7 +42,7 @@ class ProductViewModel: ObservableObject {
                 }
             }, receiveValue: { response in
                 self.products = response.products.map { ProductModel(from: $0, nextPageUrl: response.nextPageUrl == nil ? nil : "/" + response.nextPageUrl!) }
-                self.nextPageUrl = response.nextPageUrl
+//                self.nextPageUrl = response.nextPageUrl
             })
         
         isLoading = true
@@ -88,4 +88,6 @@ class ProductViewModel: ObservableObject {
         self.products = products.map { ProductModel(from: $0, nextPageUrl: "") }
         self.nextPageUrl = products.isEmpty ? nil : nextPageUrl
     }
+    
+    
 }
