@@ -1,9 +1,3 @@
-//
-//  ProductViewModel.swift
-//  new
-//
-//  Created by Yowaki on 26/2/2023.
-//
 
 import Foundation
 import Combine
@@ -20,7 +14,7 @@ class ProductViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     func fetchProducts() {
-        guard let url = URL(string: ProductViewModel.baseUrl + ProductViewModel.productEndpoint + (nextPageUrl ?? "")) else {
+        guard let url = URL(string: ProductViewModel.baseUrl + ProductViewModel.productEndpoint) else {
             errorMessage = "Invalid URL"
             return
         }
@@ -42,7 +36,7 @@ class ProductViewModel: ObservableObject {
                 }
             }, receiveValue: { response in
                 self.products = response.products.map { ProductModel(from: $0, nextPageUrl: response.nextPageUrl == nil ? nil : "/" + response.nextPageUrl!) }
-//                self.nextPageUrl = response.nextPageUrl
+                self.nextPageUrl = response.nextPageUrl
             })
         
         isLoading = true

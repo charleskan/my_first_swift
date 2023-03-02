@@ -1,9 +1,3 @@
-//
-//  ProductResponseModel.swift
-//  new
-//
-//  Created by Yowaki on 26/2/2023.
-//
 
 struct ProductResponseModel: Decodable {
     struct Price: Decodable {

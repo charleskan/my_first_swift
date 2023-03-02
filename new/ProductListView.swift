@@ -1,9 +1,3 @@
-//
-//  ProductListView.swift
-//  new
-//
-//  Created by Yowaki on 27/2/2023.
-//
 
 import Foundation
 import SwiftUI

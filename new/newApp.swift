@@ -1,9 +1,3 @@
-//
-//  newApp.swift
-//  new
-//
-//  Created by Yowaki on 26/2/2023.
-//
 
 import SwiftUI
 
